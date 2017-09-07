@@ -49,7 +49,7 @@ function copy(text, options) {
     debug && console.error('unable to copy using execCommand: ', err);
     debug && console.warn('trying IE specific stuff');
     try {
-      window.clipboardData.setData('text', text);
+      window.clipboardData.setData('text/html', text);
       success = true;
     } catch (err) {
       debug && console.error('unable to copy using clipboardData: ', err);
